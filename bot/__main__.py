@@ -48,7 +48,7 @@ def start(update, context):
     unauth = "'Not Authorized user'"
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'🙌🏽Hey <b>{uname}</b>\n\n' \ 
-        'This bot can Mirror all your links To Google Drive!\n' \
+        'This bot can Mirror all your links To Google Drive!\n'
         sendMarkup(start_string, context.bot, update.message, reply_markup)
     else:
         sendMessage(unauth, context.bot, update.message)
