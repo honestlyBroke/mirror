@@ -45,11 +45,11 @@ def stats(update, context):
 
 def start(update, context):
     uname = mention_html(update.message.from_user.id, update.message.from_user.first_name)
-    unauth = "'Not Authorized user'"
+    unauth = "Not Authorized user"
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
-        start_string = f"""'🙌🏽Hey <b>{uname}</b>\n\'\ 
-        'This bot can Mirror all your links To Google Drive!\n'"""
-        sendMessabe(start_string, context.bot, update.message)
+        start_string = f"""🙌🏽Hey <b>{uname}</b>\n\\ 
+        This bot can Mirror all your links To Google Drive!\n"""
+        sendMessage(start_string, context.bot, update.message)
     else:
         sendMessage(unauth, context.bot, update.message)
 def restart(update, context):
