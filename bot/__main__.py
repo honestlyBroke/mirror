@@ -47,8 +47,7 @@ def start(update, context):
     uname = mention_html(update.message.from_user.id, update.message.from_user.first_name)
     unauth = "Not Authorized user"
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
-       start_string = f"""Hey {uname}
-       This bot can Mirror all your links To Google Drive!"""
+       start_string = f"""Hey {uname}\n This bot can Mirror all your links To Google Drive."""
        sendMessage(start_string, context.bot, update.message)
     else:
         sendMessage(unauth, context.bot, update.message)
