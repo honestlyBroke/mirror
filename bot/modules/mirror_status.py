@@ -91,8 +91,7 @@ def bot_sys_stats():
             free -= STORAGE_THRESHOLD * 1024**3
         TDlimits = get_readable_file_size(free)
         ZUlimits = get_readable_file_size(free / 2)
-        return f"Powered By: JMDKH_Team\n" \
-            f"Send: {sent} | Recv: {recv}\n" \
+        return f"Send: {sent} | Recv: {recv}\n" \
             f"CPU: {cpu_percent()}% | RAM: {mem}%\n\n" \
             f"{status_ls}\n" \
             f"\nLimits: T/D: {TDlimits} | Z/U: {ZUlimits}"
